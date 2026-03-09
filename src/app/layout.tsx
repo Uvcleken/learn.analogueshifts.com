@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import { UserProvider } from "@/contexts/user";
 import { ToastProvider } from "@/contexts/toast";
 import ToastMessage from "@/components/application/toast";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://learn.analogueshifts.com"),
@@ -56,7 +50,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          plusJakartaSans.className,
+          "font-sans",
           "overflow-x-hidden w-full max-w-full"
         )}
       >
